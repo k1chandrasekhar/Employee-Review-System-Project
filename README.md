@@ -12,11 +12,11 @@ This project is an Employee Review System application that allows employees to s
 
 ## 🔗 Links
 
-<!-- Github Link:- https://github.com/atulsanini7900/PlacementCellApp.git -->
+Github Link:- https://github.com/k1chandrasekhar/Employee-Review-System-Project
 
 ## 🔗 Live Demo
 
-<!-- Render Link:- https://placement-cell-app-kxhc.onrender.com -->
+Render Link:- https://ers-m8rq.onrender.com
 
 ## Folder Structure
 
@@ -79,7 +79,7 @@ Ensure that the templates are correctly integrated with the routes to display th
 
 Run the following command to start the server.
 
-`node app.js`
+`node install.js`
 
 ### Step 6: Access the Application
 
