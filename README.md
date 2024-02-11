@@ -8,7 +8,7 @@ This project is an Employee Review System application that allows employees to s
 
 **Client:** `HTML`, `CSS`, `JAVASCRIPT`
 
-**Server:** `Node.js, Express.js, Mongoose, EJS,
+**Server:** `Node.js`, `Express.js`, `Mongoose`, `EJS`,
 
 ## 🔗 Links
 
