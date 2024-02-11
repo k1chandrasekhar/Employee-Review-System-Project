@@ -1,0 +1,46 @@
+<!-- Linking External CSS -->
+<link rel="stylesheet" href="/css/signUp.css">
+
+<!-- Signup Form -->
+<div class="signup">
+    <h1>Sign Up</h1>
+    <!-- Form submission to '/users/create' route using POST method -->
+    <form action="/users/create" method="POST">
+        <!-- Input field for user's name -->
+        <div class="user-box">
+            <input type="text" name="name" id="username" required>
+            <label>Name</label>
+        </div>
+        <!-- Input field for user's email -->
+        <div class="user-box">
+            <input type="email" name="email" id="email" required>
+            <label>Email</label>
+        </div>
+        <!-- Input field for user's password -->
+        <div class="user-box">
+            <input type="password" name="password" id="password" required>
+            <label>Password</label>
+        </div>
+        <!-- Input field for confirming user's password -->
+        <div class="user-box">
+            <input type="password" name="confirm_password" id="confirm_password" required>
+            <label>Confirm Password</label>
+        </div>
+        <!-- Dropdown menu for selecting user's role -->
+        <div class="user-box">
+            <select name="permission" id="permission" required>
+                <option value="employee">Employee</option>
+                <!-- <option value="admin">Admin</option> -->
+            </select>
+            <label>Role</label>
+        </div>
+        <!-- Button for submitting the form -->
+        <div class="user-box">
+            <input type="submit" value="Sign Up">
+        </div>
+        <!-- Display message and link to sign-in page if user not available -->
+        <% if(!locals.user){%>
+            <p>Already have an Account <a href="/users/signin"> Sign In</a></p>
+        <%}%>
+    </form>
+</div>

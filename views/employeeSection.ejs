@@ -1,0 +1,44 @@
+<!-- Linking External CSS -->
+<link rel="stylesheet" href="/css/employeesection.css">
+
+<!-- Main section for employees -->
+<div class="main">
+    <!-- Heading -->
+    <h2>All Employees List</h2>
+    <!-- Loop through each user -->
+    <% for(let user of users) { %>
+    <!-- Employee information box -->
+    <div class="employee-box">
+        <!-- Form for updating employee details -->
+        <form action="/employee/update/<%= user.id %>" method="POST">
+            <!-- Input field for employee name -->
+            <div class="user-box"> <label>Name</label>
+                <input type="text" name="name" placeholder="Name" value="<%= user.name %>" required>
+            </div>
+            <!-- Input field for employee email -->
+            <div class="user-box"> <label>Email</label>
+                <input type="email" name="email" placeholder="Email" value="<%= user.email %>" required>
+            </div>
+            <!-- Input field for employee password -->
+            <div class="user-box"><label>Password</label>
+                <input type="text" name="password" placeholder="Password" value="<%= user.password %>" required>
+            </div>
+            <!-- Input field for employee role (disabled) -->
+            <div class="user-box"><label>Permission</label>
+                <input type="text" name="permission" placeholder="Role" disabled  value="<%= user.permission %>" required>
+            </div>
+            <!-- Button group for update, delete, and admin role change -->
+            <div class="button-group">
+                <button type="submit">Update</button>
+                <a href="/employee/delete/<%= user.id %>">Delete</a>
+                <!-- Conditional links for admin role change -->
+                <% if (user.permission === 'admin') { %>
+                    <a href="/employee/removeadmin/<%= user.id %>">Remove Admin</a>
+                <% } else { %>
+                    <a href="/employee/makeadmin/<%= user.id %>">Make Admin</a>
+                <% } %>
+            </div>
+        </form>
+    </div>
+    <% } %>   
+</div>

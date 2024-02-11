@@ -1,0 +1,38 @@
+<!-- Linking External CSS -->
+<link rel="stylesheet" href="/css/assignwork.css">
+
+<!-- Main section for assigning work -->
+<div class="main">
+    <!-- Heading -->
+    <h2>Assign Review to Employees</h2>
+    <!-- Form for assigning review -->
+    <form action="/review/createReview" method="post">
+        <!-- Select recipient user -->
+        <div class="user-box">
+            <label for="recipient">Recipient :</label>
+            <select name="recipient" id="recipient">
+                <!-- Loop through each user -->
+                <% for(let user of users){ %>
+                    <option value="<%= user.id %>"><%= user.name %></option>
+                <% } %>            
+            </select>
+        </div>
+        <!-- Select reviewer user -->
+        <div class="user-box">       
+            <label for="reviewer">Reviewer :</label>
+            <select name="reviewer" id="Reviewer">
+                <!-- Loop through each user -->
+                <% for(let user of users){ %>
+                    <option value="<%= user.id %>"><%= user.name %></option>
+                <% } %>            
+            </select>
+        </div>
+        <!-- Submit button -->
+        <div class="user-box">
+            <!-- Wrapping the submit button in an anchor tag for styling purposes -->
+            <a href="#">
+                <input type="submit" value="Submit">
+            </a>
+        </div>
+    </form>
+</div>

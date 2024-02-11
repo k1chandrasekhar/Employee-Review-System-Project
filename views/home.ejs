@@ -1,0 +1,49 @@
+<!-- Linking External CSS -->
+<link rel="stylesheet" href="/css/home.css">
+
+<!-- Heading -->
+<br>
+<h2>Employee Review System</h2>
+
+<!-- Home Section -->
+<div class="home">
+    <!-- Assigned Reviews Section -->
+    <div class="assigned-review">
+        <h2>Give Reviews</h2>
+        <div class="assign-form">        
+            <% for(let AssignedReview of user.assignedReviews){ %>
+                <!-- Review Form -->
+                <form action="completeReview" method="post">
+                    <!-- Textarea for review message -->
+                    <div class="user-box">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="">To : <%= AssignedReview.toUser.name %></label>
+                    </div>
+                    <!-- Hidden input for recipient user ID -->
+                    <input type="hidden" name="toUser" value="<%= AssignedReview.toUser._id %>">
+                    <!-- Submit button for review submission -->
+                    <div class="user-box">
+                        <!-- Wrapping the submit button in an anchor tag for styling purposes -->
+                        <a href="#">
+                            <input type="submit" value="Submit">
+                        </a>
+                    </div>
+                </form>
+            <% } %>             
+        </div>
+    </div>
+
+    <!-- Feedback Received Section -->
+    <div class="my-review">
+        <h2>Feedback Received</h2>
+        <div class="my-review-details">
+            <% for(let MyReview of user.myReviews){ %>
+                <!-- Displaying feedback received -->
+                <div>
+                    <p><i>"<%= MyReview.message %>"</i></p>
+                    <b>~ <%= MyReview.fromUser.name %></b>
+                </div>
+            <% } %> 
+        </div>      
+    </div>
+</div>

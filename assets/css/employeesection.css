@@ -1,0 +1,75 @@
+/* assets/css/employeesection.css */
+.main {
+  margin: auto;
+  margin-top: 5%;
+  width: 95%;
+  min-height: 30vh;
+  height: auto;
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 10px; 
+  box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+}
+.main h2 {
+  color: #224957;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.main form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.main form .user-box {
+  position: relative;
+  display: flex;
+}
+
+.employee-box {
+  margin-bottom: 20px; /* Add margin between employee boxes */
+  padding: 20px; /* Add padding to the employee box */
+  border: 1px solid #ccc; /* Add border to the employee box */
+  border-radius: 5px; /* Add border radius to the employee box */
+}
+
+.user-box {
+  margin-bottom: 10px; /* Add margin between form inputs */
+}
+
+.user-box label {
+  margin-right: 10px; /* Adjust the margin as needed */
+  margin-left: 10px;
+}
+
+.button-group button,
+.button-group a {
+  margin-right: 5px; 
+  margin-left: 10px;
+  font-size: 14px; 
+  padding: 8px 16px; /
+  border-radius: 4px; 
+  background-color: #072c3a; 
+  color: #fff; 
+  border: none; 
+  cursor: pointer; 
+  text-decoration: none; 
+  transition: background-color 0.3s; 
+}
+
+.button-group button:hover,
+.button-group a:hover {
+  background-color: #1a3e72; /* Change background color on hover */
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
+  .main {
+    width: 90%;
+    max-width: none;
+  }
+}

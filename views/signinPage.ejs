@@ -1,0 +1,29 @@
+<!-- Linking External CSS -->
+<link rel="stylesheet" href="/css/signIn.css">
+
+<!-- Sign In Form -->
+<div class="signin">
+    <h1>Sign In</h1>
+    <!-- Form submission to '/users/create-session' route using POST method -->
+    <form action="/users/create-session" method="POST">
+        <!-- Input field for user's email or username -->
+        <div class="user-box">
+            <input type="text" name="email" id="username" required>
+            <label>Username</label>
+        </div>
+        <!-- Input field for user's password -->
+        <div class="user-box">
+            <input type="password" name="password" id="password" required>
+            <label>Password</label>
+        </div>
+        <!-- Submit button for signing in -->
+        <div class="user-box">
+            <!-- Wrapping the submit button in an anchor tag for styling purposes -->
+            <a href="#">
+                <input type="submit" value="Sign In">
+            </a>
+        </div>
+        <!-- Link to the sign-up page -->
+        <p>Don't have an Account <a href="/users/signup"> Sign Up</a></p>
+    </form>
+</div>
