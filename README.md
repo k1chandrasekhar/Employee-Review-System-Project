@@ -21,7 +21,7 @@ This project is an Employee Review System application that allows employees to s
 ## Folder Structure
 
 ```
-Placement-Cell/
+Employee-Review-System-Project/
 
 ├── assets/
 ├         ├── CSS/
